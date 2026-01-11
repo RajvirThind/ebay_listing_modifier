@@ -48,6 +48,7 @@ if page == "File Uploader":
                 'WholeSale Price': 'Start price'
             })
 
+            ebay_listings_updated['Available quantity'] = ebay_listings_updated['Available quantity'].fillna(0).astype(int)
             # Reorder & Clean
             original_cols = ebay_listings.columns.tolist()
             ebay_listings_updated = ebay_listings_updated[original_cols].astype(str).replace('nan', '')
