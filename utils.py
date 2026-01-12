@@ -16,7 +16,7 @@ def multiply_price(price):
     try:
         # Handles strings like "10.50 GBP" by taking the first part
         new_price = float(str(price).split(' ')[0]) * 1 #edit multiplier later
-        final_price = math.ceil(new_price) - 0.01
+        final_price = math.ceil(new_price) - 0.51
         return f"{final_price:.2f}"
     except (ValueError, TypeError, AttributeError):
         return "0.00"
